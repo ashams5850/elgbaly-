@@ -6,28 +6,55 @@
 <meta name="theme-color" content="#071827">
 <title>الجبالي لخدمات الكمبيوتر والموبايل</title>
 <style>
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:#06111d}
-body{font-family:Arial,Tahoma,sans-serif;text-align:center}
-.page{position:relative;width:min(100%,700px);margin:0 auto;line-height:0}
-.poster{display:block;width:100%;height:auto}
-.hotspot{position:absolute;display:block;border-radius:18px;z-index:2}
-.whatsapp{left:51%;right:4%;top:78.0%;height:5.2%}
-.phone{left:75%;right:4%;top:78.0%;height:5.2%}
-.maps{left:25%;right:51%;top:78.0%;height:5.2%}
-.facebook{left:4%;right:76%;top:78.0%;height:5.2%}
-@media(max-width:450px){
- .hotspot{border-radius:10px}
-}
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0;background:#06111d;overflow-x:hidden}
+  body{font-family:Arial,Tahoma,sans-serif;text-align:center}
+
+  .page{
+    position:relative;
+    width:min(100%,700px);
+    margin:0 auto;
+    display:block;
+  }
+  .poster{
+    display:block;
+    width:100%;
+    height:auto;
+    user-select:none;
+    -webkit-user-drag:none;
+    pointer-events:none;
+  }
+
+  .hotspot{
+    position:absolute;
+    display:block;
+    z-index:10;
+    border-radius:18px;
+    background:rgba(255,0,0,0); /* شفاف - غيّرها لـ rgba(255,0,0,.3) وقت التجربة */
+    cursor:pointer;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    touch-action:manipulation;
+  }
+
+  /* اضبط النسب دي حسب مكان الأزرار في صورة poster.png */
+  .whatsapp { left:51%; right:4%;  top:78%; height:5.2% }
+  .phone    { left:75%; right:4%;  top:78%; height:5.2% }
+  .maps     { left:25%; right:51%; top:78%; height:5.2% }
+  .facebook { left:4%;  right:76%; top:78%; height:5.2% }
+
+  @media(max-width:450px){
+    .hotspot{border-radius:10px}
+  }
 </style>
 </head>
 <body>
-<div class="page">
-  <img class="poster" src="poster.png" alt="الجبالي لخدمات الكمبيوتر والموبايل">
-  <a class="hotspot whatsapp" href="https://wa.me/201015985750" aria-label="واتساب"></a>
-  <a class="hotspot phone" href="tel:01015985750" aria-label="اتصال مباشر"></a>
-  <a class="hotspot maps" href="https://maps.app.goo.gl/hWctMoHnBUeNqQqV7?g_st=ac" target="_blank" rel="noopener" aria-label="خرائط جوجل"></a>
-  <a class="hotspot facebook" href="https://www.facebook.com/share/1DLdFqTKZM/" target="_blank" rel="noopener" aria-label="فيسبوك"></a>
-</div>
+  <div class="page">
+    <img class="poster" src="poster.png" alt="الجبالي لخدمات الكمبيوتر والموبايل" loading="eager">
+
+    <a class="hotspot whatsapp" href="https://wa.me/201015985750" target="_blank" rel="noopener" aria-label="واتساب"></a>
+    <a class="hotspot phone"    href="tel:01015985750" aria-label="اتصال مباشر"></a>
+    <a class="hotspot maps"     href="https://maps.app.goo.gl/hWctMoHnBUeNqQqV7?g_st=ac" target="_blank" rel="noopener" aria-label="خرائط جوجل"></a>
+    <a class="hotspot facebook" href="https://www.facebook.com/share/1DLdFqTKZM/" target="_blank" rel="noopener" aria-label="فيسبوك"></a>
+  </div>
 </body>
 </html>
